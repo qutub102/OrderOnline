@@ -45,7 +45,7 @@ nav .navigation li:hover{
     background: url("http://source.unsplash.com/1300x500/?code") no-repeat center center/cover;
     position: absolute;
     top: 64px;
-    height: 80.5%;
+    height: 100%;
     width: 100%;
     z-index: -1;
     opacity: 0.9;
