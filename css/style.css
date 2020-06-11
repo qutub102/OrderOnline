@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+nav .navigation{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+    border-radius: 10px;
+}
+nav .navigation li{
+    padding: 15px;
+    font-size: 1.6rem;
+    border-radius: 10px;
+    font-family: cursive;
+    font-weight: bold;
+}
+nav .navigation li a{
+    color: black;
+    text-decoration: none;
+}
+nav .navigation li:hover{
+    background-color: white;
+    color: black;
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    /* margin-top: 50px; */
+    height: 500px;
+    /* border: 1px solid black; */
+}
+.header p{
+    margin-top: 10px;
+    color:darkblue;
+}
+.header::before{
+    content: "";
+    background: url("http://source.unsplash.com/1300x500/?code") no-repeat center center/cover;
+    position: absolute;
+    top: 64px;
+    height: 80.5%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.9;
+    /* border: 1px solid red; */
+}
+#contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 500px;
+    /* border: 1px solid black; */
+
+}
+#contact h3{
+    margin: 20px;
+    font-size: 3rem;
+}
+#contact form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+#contact form input{
+    padding: 15px;
+    border-radius: 10px;
+    outline: none;
+    margin: 10px;
+    width: 70%;
+    border: none;
+    font-weight: bold;
+    border-bottom: 2px solid black;
+    /* border: 1px solid black; */
+    background: transparent;
+    
+}
+::placeholder{
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+}
+#contact form textarea{
+    padding: 15px;
+    border-radius: 10px;
+    background: transparent;
+    outline: none;
+    margin: 8px;
+    width: 70%;
+    /* border: none; */
+    border: 1px solid black;
+}
+.btn{
+    padding: 10px 15px;
+    border-radius: 10px;
+    background-color: blue;
+    font-size: medium;
+    font-weight: bold;
+    outline: none;
+    border: 1px solid black;
+}
+#contact::before{
+    content: "";
+    background: url("http://source.unsplash.com/1300x500/?code") no-repeat center center/cover;
+    position: absolute;
+    top: 64px;
+    height: 80.5%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.9;
+    /* border: 1px solid red; */
+}
+.service{
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+}
+.service .box{
+    border: 2px solid black;
+    margin: 30px 10px;
+    height: 350px;
+    width: 250px;
+    border-radius: 10px;
+}
+.service .box img{
+    height: 200px;
+    width: 250px;
+    border-radius: 10px;
+}
+.service .box .card{
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    padding: 10px 0px;
+    /* padding: 10px; */
+}
+.service .box div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
