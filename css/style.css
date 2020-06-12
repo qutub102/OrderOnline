@@ -165,7 +165,7 @@ form .register input{
     outline: none;
 }
 form .register input::placeholder{
-    padding-left: 140px;
+    padding-left: 120px;
 }
 .login{
     display: flex;
