@@ -73,7 +73,11 @@
         //     window.location = "service2.html"
         // }
         function move(){
-            window.location="Registration.html"
+            if(localStorage.getItem('register') == null){
+             window.location = "login.html"
+           }else{
+             window.location = "Registration.html"
+           }
         }
     </script>
 </body>
