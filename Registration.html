@@ -39,7 +39,7 @@
     <center>
         <h1>Registration First</h1>
     </center>
-    <form  method="get">
+    <form action="index.html" method="get">
         <div id="register" class="register">
             <input type="text" name="uname" id="uname" placeholder="Enter Username">
             <input type="text" name="name" id="name" placeholder="Enter Name">
@@ -76,9 +76,7 @@
                 mob: mob,
                 pass: pass
             }
-            console.log(reg)
             localStorage.setItem('register',JSON.stringify(reg))
-            window.location = "index.html"
         }
     </script>
 </body>
