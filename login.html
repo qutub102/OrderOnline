@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Login</title>
+</head>
+<body>
+    <nav>
+        <ul class="navigation">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <center>
+        
+        <div class="heading">
+            <h1>Login Form</h1>
+        </div>
+    </center>
+    <div class="login" id="login">
+        <input type="text" name="uname" id="uname" placeholder="Enter Username">
+        <input type="password" name="pass" id="pass" placeholder="Enter Password">
+        <button type="submit" class="btn" onclick="login()">Login</button>
+    </div>
+    <script>
+        function login(){
+            if(localStorage.getItem('register')  == null){
+                alert("Register First")
+                window.location = "Registration.html"
+            }
+            else{
+                var uname = document.getElementById('uname').value
+                var pass = document.getElementById('pass').value
+                var reg = JSON.parse(localStorage.getItem('register'))
+                if(reg["uname"] == uname && reg["pass"] == pass){
+                    window.location = "service.html"
+                }
+                else{
+                    alert("Wrong Username and Password")
+                }
+            }
+        }
+    </script>
+</body>
+</html>
