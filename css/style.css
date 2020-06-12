@@ -149,7 +149,7 @@ nav .navigation li:hover{
     align-items: center;
     justify-content: center;
 }
-.register{
+form .register{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -157,7 +157,7 @@ nav .navigation li:hover{
     margin-top: 20px;
     /* border: 1px solid black; */
 }
-.register input{
+form .register input{
     margin: 10px 0px;
     padding: 10px 15px;
     border-radius: 10px;
