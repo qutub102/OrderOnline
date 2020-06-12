@@ -52,12 +52,13 @@
     <div id="header" class="header">
         <h1>Welcome <span id="bro" class="bro">Brother</span></h1>
         <p>We Serve The Best.</p>
-        <div>
+        <div id="regist">
             <button type="submit" class="btn" onclick="login()">Login</button>
-            <button type="submit" class="btn" onclick="moveregister()">Register</button>
+            <button type="submit"  class="btn" onclick="moveregister()">Register</button>
         </div>
     </div>
     <script>
+        var btn = document.getElementById('regist')
         if(localStorage.getItem('register')==null){
             document.querySelector('span').innerHTML = "Brother"
         }
@@ -65,6 +66,7 @@
             var reg = JSON.parse(localStorage.getItem('register'))
             console.log(reg)
             document.querySelector('span').innerHTML = reg["name"]
+            btn.style.display = "none"
         }
         function moveregister(){
             window.location = "Registration.html"
