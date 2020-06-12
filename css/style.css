@@ -42,7 +42,7 @@ nav .navigation li:hover{
 }
 .header::before{
     content: "";
-    background: url("/bg.jfif") no-repeat center center/cover;
+    background: url("/img/bg.jfif") no-repeat center center/cover;
     position: absolute;
     top: 64px;
     height: 100%;
@@ -82,7 +82,7 @@ nav .navigation li:hover{
     background: transparent;
     
 }
-::placeholder{
+::placeholder{ 
     color: black;
     font-size: 1rem;
     font-weight: bold;

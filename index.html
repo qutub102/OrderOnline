@@ -52,6 +52,10 @@
     <div id="header" class="header">
         <h1>Welcome <span id="bro" class="bro">Brother</span></h1>
         <p>We Serve The Best.</p>
+        <div>
+            <button type="submit" class="btn" onclick="login()">Login</button>
+            <button type="submit" class="btn" onclick="moveregister()">Register</button>
+        </div>
     </div>
     <script>
         if(localStorage.getItem('register')==null){
@@ -62,6 +66,13 @@
             console.log(reg)
             document.querySelector('span').innerHTML = reg["name"]
         }
+        function moveregister(){
+            window.location = "Registration.html"
+        }
+        function login(){
+            window.location = "login.html"
+        }
+        
     </script>
 </body>
 
