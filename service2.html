@@ -17,6 +17,14 @@
                 margin: auto;
             }
         }
+        @media (max-width: 400px) {
+            #rem{
+                font-size: 1.4rem;
+            }
+            nav{
+                overflow: hidden;
+            };
+        }
     </style>
 </head>
 
@@ -29,7 +37,7 @@
             <li><a href="Cart.html">Cart (<span id="cart">0</span>) </a></li>
         </ul>
     </nav>
-    <center><h1>Now You Can Order !!!</h1></center>
+    <center><h1 id="rem">Now You Can Order !!!</h1></center>
     <div id="service" class="service">
         <div class="box">
             <img src="burger/tomato.webp" alt="burger">
