@@ -9,6 +9,16 @@
   <!--Typed.js-->
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/typed.js"></script>
     <title>Cart</title>
+    <style>
+        @media (max-width: 400px) {
+           #amt{
+               font-size: 1.7rem;
+           } 
+           nav{
+               overflow: hidden;
+           }
+        }
+    </style>
 </head>
 <body>
     <nav>
@@ -23,7 +33,7 @@
         <ul class="list-group items">
           <h3>Your Cart</h3>
         </ul>
-        <h2>Total Amount: <span id='price'></span></h2>
+        <h2 id="amt">Total Amount: <span id='price'></span></h2>
       </div>
       <div class="container my-5">
         <h3>Enter Details</h3>
