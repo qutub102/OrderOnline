@@ -52,10 +52,10 @@
         </div>
     </form>
     <script>
-        if(localStorage.getItem('register')==null){
+        if (localStorage.getItem('register') == null) {
             var reg = {}
         }
-        else{
+        else {
 
         }
         function reg1() {
@@ -66,18 +66,24 @@
             var pin = document.getElementById('pin').value
             var mob = document.getElementById('mob').value
             var pass = document.getElementById('pass').value
-            console.log(uname)
-            reg = {
-                uname: uname
-                , name: name,
-                email: email,
-                add: add,
-                pin: pin,
-                mob: mob,
-                pass: pass
+            if (uname == "" && name == "" && email == "" && add == "" && pin == "" && mob == "" && pass == "") {
+                alert('Enter Full Detail')
+            } else {
+                console.log(uname)
+                reg = {
+                    uname: uname
+                    , name: name,
+                    email: email,
+                    add: add,
+                    pin: pin,
+                    mob: mob,
+                    pass: pass
+                }
+                localStorage.setItem('register', JSON.stringify(reg))
             }
-            localStorage.setItem('register',JSON.stringify(reg))
+
         }
+
     </script>
 </body>
 

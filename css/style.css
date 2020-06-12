@@ -190,3 +190,6 @@ form .register input::placeholder{
     align-items: center;
     justify-content: center;
 }
+#regist{
+    padding: 0px 5px;
+}

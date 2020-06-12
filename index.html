@@ -8,12 +8,12 @@
     <title>Demo</title>
     <style>
         @media (max-width: 1300px){
-            #header h1{
+            #header h1,a{
                 font-size: 3rem;
             }
         }
         @media (max-width: 650px){
-            #header h1{
+            #header h1,a{
                 font-size: 2rem;
             }
         }
@@ -23,7 +23,7 @@
             }
         }
         @media (max-width: 360px){
-            #header h1,p{
+            #header h1,p,a{
                 font-size: 1.5rem;
             }
         }
@@ -54,11 +54,14 @@
         <p>We Serve The Best.</p>
         <div id="regist">
             <button type="submit" class="btn" onclick="login()">Login</button>
-            <button type="submit"  class="btn" onclick="moveregister()">Register</button>
+            <button type="submit" id="disnon" class="btn" onclick="moveregister()">Register</button>
+        </div>
+        <div class="unregist">
+            <a onclick="unregist()">If You Want You can delete Registration By Clicking Here.</a>
         </div>
     </div>
     <script>
-        var btn = document.getElementById('regist')
+        var btn = document.getElementById('disnon')
         if(localStorage.getItem('register')==null){
             document.querySelector('span').innerHTML = "Brother"
         }
@@ -67,6 +70,10 @@
             console.log(reg)
             document.querySelector('span').innerHTML = reg["name"]
             btn.style.display = "none"
+            function unregist(){
+            localStorage.clear()
+            btn.style.display = ""
+        }
         }
         function moveregister(){
             window.location = "Registration.html"
@@ -74,7 +81,7 @@
         function login(){
             window.location = "login.html"
         }
-        
+         
     </script>
 </body>
 
