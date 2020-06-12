@@ -131,7 +131,7 @@ nav .navigation li:hover{
 }
 .service .box img{
     height: 200px;
-    width: 250px;
+    width: 245px;
     border-radius: 10px;
 }
 .service .box .card{
@@ -184,4 +184,9 @@ form .register input::placeholder{
     padding: 10px 15px;
     border-radius: 10px;
     outline: none;
+}
+.divpr{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

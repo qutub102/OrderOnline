@@ -39,7 +39,7 @@
     <center>
         <h1>Registration First</h1>
     </center>
-    <form action="index.html" method="get">
+    <form  method="get">
         <div id="register" class="register">
             <input type="text" name="uname" id="uname" placeholder="Enter Username">
             <input type="text" name="name" id="name" placeholder="Enter Name">
@@ -48,7 +48,7 @@
             <input type="text" name="pin" id="pin" placeholder="Enter Pincode">
             <input type="text" name="mob" id="mob" placeholder="Enter Mobile No.">
             <input type="password" name="pass" id="pass" placeholder="Enter Password">
-            <button type="submit" class="btn" onclick="reg()">Submit</button>
+            <button type="submit" class="btn" onclick="reg1()">Submit</button>
         </div>
     </form>
     <script>
@@ -56,9 +56,9 @@
             var reg = {}
         }
         else{
-            
+
         }
-        function reg() {
+        function reg1() {
             var uname = document.getElementById('uname').value
             var name = document.getElementById('name').value
             var email = document.getElementById('email').value
@@ -66,6 +66,7 @@
             var pin = document.getElementById('pin').value
             var mob = document.getElementById('mob').value
             var pass = document.getElementById('pass').value
+            console.log(uname)
             reg = {
                 uname: uname
                 , name: name,
@@ -77,6 +78,7 @@
             }
             console.log(reg)
             localStorage.setItem('register',JSON.stringify(reg))
+            window.location = "index.html"
         }
     </script>
 </body>
