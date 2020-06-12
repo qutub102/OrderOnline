@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+    <style>
+        @media (max-width:500px) {
+            #register input {
+                width: 290px;
+            }
+
+            ::placeholder {
+                padding-left: 100px;
+            }
+
+            nav {
+                overflow: hidden;
+            }
+        }
+
+        h1 {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul class="navigation">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <center>
+        <h1>Registration First</h1>
+    </center>
+    <form action="index.html" method="get">
+        <div id="register" class="register">
+            <input type="text" name="uname" id="uname" placeholder="Enter Username">
+            <input type="text" name="name" id="name" placeholder="Enter Name">
+            <input type="text" name="email" id="email" placeholder="Enter Email">
+            <input type="text" name="add" id="add" placeholder="Enter Address">
+            <input type="text" name="pin" id="pin" placeholder="Enter Pincode">
+            <input type="text" name="mob" id="mob" placeholder="Enter Mobile No.">
+            <input type="password" name="pass" id="pass" placeholder="Enter Password">
+            <button type="submit" class="btn" onclick="reg()">Submit</button>
+        </div>
+    </form>
+    <script>
+        function reg() {
+            var uname = document.getElementById('uname').value
+            var name = document.getElementById('name').value
+            var email = document.getElementById('email').value
+            var add = document.getElementById('add').value
+            var pin = document.getElementById('pin').value
+            var mob = document.getElementById('mob').value
+            var pass = document.getElementById('pass').value
+            reg = {
+                uname: uname
+                , name: name,
+                email: email,
+                add: add,
+                pin: pin,
+                mob: mob,
+                pass: pass
+            }
+            console.log(reg)
+            localStorage.setItem('register',JSON.stringify(reg))
+        }
+    </script>
+</body>
+
+</html>

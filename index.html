@@ -7,7 +7,27 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Demo</title>
     <style>
-        @media (max-width: 800px){
+        @media (max-width: 1300px){
+            #header h1{
+                font-size: 3rem;
+            }
+        }
+        @media (max-width: 650px){
+            #header h1{
+                font-size: 2rem;
+            }
+        }
+        @media (max-width: 400px){
+            nav{
+                overflow: hidden;
+            }
+        }
+        @media (max-width: 360px){
+            #header h1,p{
+                font-size: 1.5rem;
+            }
+        }
+        /* @media (max-width: 800px){
             #header{
                 font-size: 1.5rem;
             }
@@ -16,7 +36,7 @@
             #header{
                 font-size: 1.2rem;
             }
-        }
+        } */
     </style>
 </head>
 
@@ -30,9 +50,19 @@
         </ul>
     </nav>
     <div id="header" class="header">
-        <h1>Welcome Brother</h1>
+        <h1>Welcome <span id="bro" class="bro">Brother</span></h1>
         <p>We Serve The Best.</p>
     </div>
+    <script>
+        if(localStorage.getItem('register')==null){
+            document.querySelector('span').innerHTML = "Brother"
+        }
+        else{
+            var reg = JSON.parse(localStorage.getItem('register'))
+            console.log(reg)
+            document.querySelector('span').innerHTML = reg["name"]
+        }
+    </script>
 </body>
 
 </html>
