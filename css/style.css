@@ -31,7 +31,7 @@ nav .navigation li:hover{
     justify-content: center;
     align-items: center;
     font-size: 3rem;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;  
     /* margin-top: 50px; */
     height: 500px;
     /* border: 1px solid black; */
@@ -42,13 +42,13 @@ nav .navigation li:hover{
 }
 .header::before{
     content: "";
-    background: url("http://source.unsplash.com/1300x500/?code") no-repeat center center/cover;
+    background: url("/bg.jfif") no-repeat center center/cover;
     position: absolute;
     top: 64px;
     height: 100%;
     width: 100%;
     z-index: -1;
-    opacity: 0.9;
+    opacity: 0.7;
     /* border: 1px solid red; */
 }
 #contact{
