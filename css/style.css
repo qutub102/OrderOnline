@@ -37,9 +37,13 @@ nav .navigation li:hover{
     height: 500px;
     /* border: 1px solid black; */
 }
+.header h1{
+    text-align: center;
+}
 .header p{
     margin-top: 10px;
     color:darkblue;
+    text-align: center;
 }
 .header::before{
     content: "";
@@ -193,4 +197,5 @@ form .register input::placeholder{
 }
 #regist{
     padding: 0px 5px;
+    text-align: center;
 }
