@@ -28,7 +28,7 @@
     </div>
     <script>
         function login(){
-            if(localStorage.getItem('register')  == null){
+            if(localStorage.getItem('register')  == null){ 
                 alert("Register First")
                 window.location = "Registration.html"
             }
@@ -37,6 +37,7 @@
                 var pass = document.getElementById('pass').value
                 var reg = JSON.parse(localStorage.getItem('register'))
                 if(reg["uname"] == uname && reg["pass"] == pass){
+                    localStorage.setItem('login','success')
                     window.location = "service2.html"
                 }
                 else{

@@ -44,8 +44,9 @@
     <nav>
         <ul class="navigation">
             <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="service.html">Services</a></li>
+            <li id="about"><a href="about.html">About</a></li>
+            <li id="logout" ><button onclick="del()" style="background: none;border: none;font-size: 1.6rem;font-weight: bold;font-family: cursive;outline: none;">Logout</button></li>
+            <li><a onclick="auth()">Services</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
@@ -53,7 +54,7 @@
         <h1>Welcome <span id="bro" class="bro">Brother</span></h1>
         <p>We Serve The Best.</p>
         <div id="regist">
-            <button type="submit" class="btn" onclick="login()">Login</button>
+            <button type="submit" id="disnon2" class="btn" onclick="login()">Login</button>
             <button type="submit" id="disnon" class="btn" onclick="moveregister()">Register</button>
         </div>
         <div class="unregist">
@@ -61,14 +62,26 @@
         </div>
     </div>
     <script>
+        
         var btn = document.getElementById('disnon')
-        if(localStorage.getItem('register')==null){
-            document.querySelector('span').innerHTML = "Brother"
+        var btn2 = document.getElementById('disnon2')
+        var about = document.getElementById('about')
+        var logout = document.getElementById('logout')
+        if(localStorage.getItem('login') == 'success'){
+            btn2.style.display = "none"
+            about.style.display = "none"
+            var reg = JSON.parse(localStorage.getItem('register'))
+            document.querySelector('span').innerHTML = reg["name"]
         }
         else{
-            var reg = JSON.parse(localStorage.getItem('register'))
+            logout.style.display = "none"
+        }
+        if(localStorage.getItem('register')==null){
+            document.querySelector('span').innerHTML = "Brother"
+            logout.style.display = "none"
+        }
+        else{
             console.log(reg)
-            document.querySelector('span').innerHTML = reg["name"]
             btn.style.display = "none"
             function unregist(){
             localStorage.clear()
@@ -81,7 +94,18 @@
         function login(){
             window.location = "login.html"
         }
-         
+         function del(){
+             localStorage.removeItem('login')
+             window.location = 'index.html'
+         }
+         function auth(){
+            if(localStorage.getItem('login') == 'success'){
+                window.location = 'service2.html'
+            }
+            else{
+                window.location = 'service.html'
+            }
+         }
     </script>
 </body>
 

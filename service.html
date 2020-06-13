@@ -25,6 +25,13 @@
                 top: 0;
             }
         }
+        @media (max-width: 400px){
+            nav{
+                overflow: hidden;
+                position: sticky;
+                top: 0;
+            }
+        }
     </style>
 </head>
 
@@ -33,7 +40,7 @@
         <ul class="navigation">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="service.html">Services</a></li>
+            <li><a onclick="auth()">Services</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
@@ -80,6 +87,14 @@
         </div>
     </div>
     <script>
+        function auth(){
+            if(localStorage.getItem('login') == 'success'){
+                window.location = 'service2.html'
+            }
+            else{
+                window.location = 'service.html'
+            }
+        }
         // if(localStorage.getItem('register') == null){
 
         // }
