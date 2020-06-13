@@ -92,19 +92,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
+        <script src="js/script.js"></script>
     <script>
-        function auth() {
-            if (localStorage.getItem('login') == 'success') {
-                window.location = 'service2.html'
-            }
-            else {
-                window.location = 'service.html'
-            }
-        }
-        function del(){
-            localStorage.removeItem('login')
-            window.location = 'index.html'
-        }
+        
         if (localStorage.getItem('cart') == null) {
             var cart = {};
         }
