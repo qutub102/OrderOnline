@@ -199,3 +199,6 @@ form .register input::placeholder{
     padding: 0px 5px;
     text-align: center;
 }
+.unregist{
+    text-align: center;
+}
